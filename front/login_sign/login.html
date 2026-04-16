@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>로그인</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="../dropdown.css">
+  <link rel="icon" type="image/png" href="../co.png" />
+  <script defer src="login.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-area" onclick="location.href='../main/main.html'">
+      <img src="../co.png" alt="로고" class="logo-image" />
+      <span class="logo-text">코드메이트</span>
+    </div>
+  </header>
+
+  <div class="auth-wrapper">
+    <h2>로그인</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="이메일" required />
+      <input type="password" id="loginPassword" placeholder="비밀번호" required />
+      <button type="submit">로그인</button>
+    </form>
+    <div class="redirect-link">
+      계정이 없나요? <a href="sign.html">회원가입</a>
+    </div>
+  </div>
+</body>
+</html>

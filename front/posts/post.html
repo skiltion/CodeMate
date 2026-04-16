@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Mate</title>
+  <link rel="stylesheet" href="post.css" />
+  <link rel="stylesheet" href="../dropdown.css">
+  <link rel="icon" type="image/png" href="../co.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 상단 로고 -->
+  <header class="header">
+    <div class="logo-area" onclick="location.href='../main/main.html'">
+      <img src="../co.png" alt="로고" class="logo-image" />
+      <span class="logo-text">코드메이트</span>
+    </div>
+    <div class="user-icon" id="userIcon">
+      <button class="user-icon-btn" onclick="toggleDropdown()" aria-label="사용자 메뉴">
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="white">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <!-- 로그인 상태에 따라 동적으로 메뉴가 채워짐 -->
+      </div>
+    </div>
+  </header>
+
+  <div class="action-buttons">
+    <button class="ike-btn" data-action="edit" onclick="handleButtonClick(this); location.href='modify.html'">수정</button>
+    <button class="ike-btn" data-action="delete" id="deleteBtn">삭제</button>
+  </div>
+
+  <div class="chat-container">
+    <div class="character-profile">
+      <div class="image-wrapper">
+        <img src="" alt="게시글 이미지" id="postImage" class="character-img" />
+      </div>
+      <div class="character-info">
+        <h2 id="postTitle">게시글 제목</h2>
+        <p class="description" id="postDescription">게시글 설명</p>
+        <button type="button" class="like-btn">👍</button>
+      </div>
+    </div>
+
+    <!-- ✅ 채팅 시작 버튼 -->
+    <div class="start-chat">
+      <button onclick="goToChatbot()">대화하기</button>
+    </div>
+
+    <!-- 댓글 입력 -->
+    <div class="comment-section">
+      <h3>댓글</h3>
+      <ul class="comment-list" id="commentList"></ul>
+      <div class="comment-input">
+        <input type="text" id="commentInput" placeholder="댓글을 입력하세요..." />
+        <button onclick="submitComment()">등록</button>
+      </div>
+    </div>
+
+    <!-- 채팅창 -->
+    <div class="chat-placeholder" id="chatBox">
+      <!-- 대화 내용이 여기에 추가됨 -->
+    </div>
+  </div>
+
+  <div id="deleteModal">
+    <div class="modal-box">
+      <p>게시글을 삭제하시겠습니까?</p>
+      <div class="modal-buttons">
+        <button id="confirmDeleteBtn" type="button">삭제</button>
+        <button id="cancelDeleteBtn" type="button">취소</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="post.js"></script>
+  <script src="../dropdown.js"></script>
+</body>
+</html>

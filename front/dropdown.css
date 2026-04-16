@@ -1,0 +1,94 @@
+/* 헤더 영역 */
+.header {
+  background-color: #1f1f1f;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 유저 아이콘 */
+.user-icon {
+  position: relative;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.user-icon:hover {
+  background-color: #333;
+}
+
+/* 유저 버튼 (버튼으로 구성된 경우) */
+.user-icon-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-icon-btn:hover {
+  background-color: #333;
+}
+
+.user-image {
+  width: 32px;
+  height: 32px;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: absolute;
+  top: 48px;  /* 버튼 바로 아래 */
+  right: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 8px 0;
+  width: 120px;
+  text-align: center;
+  z-index: 999;
+  flex-direction: column;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}

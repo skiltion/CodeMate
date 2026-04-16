@@ -1,0 +1,157 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+  background: #141413;
+  color: white;
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100vh;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(255, 98, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+}
+
+.user-icon {
+  position: relative;
+}
+
+.user-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon-btn svg {
+  fill: white;
+  width: 28px;
+  height: 28px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background-color: #333333;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(255, 98, 0, 0.4);
+  display: none;
+  flex-direction: column;
+  min-width: 120px;
+  user-select: none;
+  z-index: 101;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ff6200;
+}
+
+/* dropdown show */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* 로그인/회원가입 박스 */
+.auth-wrapper {
+  background: #1f1f1f;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(255, 98, 0, 0.3);
+  width: 350px;
+  margin: 100px auto 0; /* 헤더 높이 감안 위쪽 마진 */
+  text-align: center;
+}
+
+/* input 스타일 */
+.auth-wrapper input[type="text"],
+.auth-wrapper input[type="email"],
+.auth-wrapper input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0 20px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 버튼 */
+.auth-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6200;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.auth-wrapper button:hover {
+  background-color: #e65a00;
+}
+
+/* 아래 링크 */
+.auth-wrapper .redirect-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.auth-wrapper .redirect-link a {
+  color: #ff6200;
+  text-decoration: none;
+}
+
+.auth-wrapper .redirect-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Mate</title>
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="stylesheet" href="../dropdown.css">
+  <link rel="icon" type="image/png" href="../co.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="header"> 
+    <div class="logo-area" onclick="location.href='../main/main.html'">
+      <img src="../co.png" alt="로고" class="logo-image" />
+      <span class="logo-text">코드메이트</span>
+    </div>
+  </header> 
+
+  <div class="container">
+    <div class="chat-header"></div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="메시지를 입력하세요" />
+      <button onclick="sendMessage()">전송</button>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+  <script src="../dropdown.js"></script>
+</body>
+</html>

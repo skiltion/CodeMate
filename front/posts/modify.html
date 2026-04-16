@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Mate</title>
+  <link rel="stylesheet" href="modify.css"/>
+  <link rel="stylesheet" href="../dropdown.css">
+  <link rel="icon" type="image/png" href="../co.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-area" onclick="location.href='../main/main.html'">
+      <img src="../co.png" alt="로고" class="logo-image" />
+      <span class="logo-text">코드메이트</span>
+    </div>
+
+    <div class="user-icon" id="userIcon">
+      <button class="user-icon-btn" onclick="toggleDropdown()" aria-label="사용자 메뉴">
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="white">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <!-- 로그인 상태에 따라 동적으로 메뉴가 채워짐 -->
+      </div>
+    </div>
+  </header>
+
+  <script src="modify.js"></script>
+  <script src="../dropdown.js"></script>
+</body>
+</html>

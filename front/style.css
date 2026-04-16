@@ -1,0 +1,205 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  background-color: #141413;
+  color: white;
+  font-family: 'Fira Code', monospace;
+}
+
+/* 이미지 카드 */
+.image-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.image-cards .card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 240px;
+}
+
+.image-cards .card:hover {
+  transform: scale(1.05);
+}
+
+.image-cards .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image-cards .card p {
+  margin-top: 8px;
+}
+
+/* 모달 */
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #222;
+  padding: 30px;
+  border-radius: 16px;
+  width: 380px;
+  color: white;
+  text-align: center;
+}
+
+.modal button {
+  margin: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background: #ff6333;
+}
+
+/* 챗봇 화면 */
+.chat-screen {
+  display: none;
+  padding: 40px 20px;
+}
+
+.chat-box {
+  background: #1f1f1f;
+  padding: 24px;
+  border-radius: 14px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(255, 98, 0, 0.2);
+}
+
+.chat-box h2 {
+  text-align: center;
+  color: #ff4d00;
+  margin-bottom: 16px;
+}
+
+.messages {
+  min-height: 250px;
+  background: #121212;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 14px;
+  color: #f0f0f0;
+  margin-bottom: 16px;
+  overflow-y: auto;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 12px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.input-row button {
+  padding: 12px 20px;
+  background-color: #ff4d00;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-row button:hover {
+  background-color: #ff6d33;
+}
+
+.back-button {
+  margin-top: 16px;
+  display: inline-block;
+  color: #bbb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.image-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 240px;
+  color: white;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 기존 .image-cards .card p 대신에 .post-title 적용 시 */
+/* 글 제목 스타일 */
+.post-title {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 작성자 닉네임 스타일 추가 */
+.post-nickname {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #aaa;  /* 좀 더 연한 회색 */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+footer button {
+  width: 90%;
+  max-width: 600px;
+  font-size: 18px;
+  padding: 12px 0;
+  border-radius: 8px;
+  background-color: #ff4d00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer button:hover {
+  background-color: #ff6d33;
+}
